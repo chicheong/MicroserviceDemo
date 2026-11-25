@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20261125073740"
+  },
+  "applications": ["*"],
+  "clientRootFolder": "microserviceDemo",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDefault",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "microserviceName": "microserviceDemo",
+  "name": "ProductItem",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "item",
+      "relationshipName": "product",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

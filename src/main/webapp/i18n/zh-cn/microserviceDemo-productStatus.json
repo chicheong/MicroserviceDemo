@@ -1,0 +1,10 @@
+{
+  "microserviceDemoApp": {
+    "ProductStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "RESTRICTED": "RESTRICTED",
+      "INACTIVE": "INACTIVE"
+    }
+  }
+}

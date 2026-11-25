@@ -1,0 +1,70 @@
+{
+  "annotations": {
+    "changelogDate": "20261125073739"
+  },
+  "applications": ["*"],
+  "clientRootFolder": "microserviceDemo",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ProductStatus",
+      "fieldValues": "ACTIVE,RESTRICTED,INACTIVE"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "microserviceName": "microserviceDemo",
+  "name": "Product",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "productItem",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "item",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

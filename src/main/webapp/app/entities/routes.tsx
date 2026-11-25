@@ -9,11 +9,12 @@ import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
 import { registerTranslations } from 'app/shared/reducers/locale';
 
-import entitiesReducers from './reducers';
-
 // Register the microfrontend translations before the routes are rendered by the host application.
 await registerTranslations();
 
+import Product from './microserviceDemo/product';
+import ProductItem from './microserviceDemo/product-item';
+import entitiesReducers from './reducers';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {
@@ -24,6 +25,8 @@ export default () => {
     <div>
       <ErrorBoundaryRoutes>
         {/* prettier-ignore */}
+        <Route path="/product/*" element={<Product />} />
+        <Route path="/product-item/*" element={<ProductItem />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
         <Route path="*" element={<PageNotFound />} />
       </ErrorBoundaryRoutes>

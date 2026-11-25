@@ -1,0 +1,34 @@
+entity Product {
+	name String required,
+	code String,
+	brand String,
+	description String,
+	content String,
+	remark String,
+	status ProductStatus,
+	createdBy String,
+	createdDate ZonedDateTime,
+	lastModifiedBy String,
+	lastModifiedDate ZonedDateTime
+}
+
+enum ProductStatus {
+    ACTIVE, RESTRICTED, INACTIVE
+}
+
+entity ProductItem {
+	code String,
+	isDefault Boolean,
+	quantity Integer,
+	currency String,
+	price BigDecimal
+}
+
+relationship OneToMany {
+	Product{item} to ProductItem{product}
+}
+
+paginate Product with pagination
+paginate ProductItem with infinite-scroll
+service * with serviceClass
+dto * with mapstruct
